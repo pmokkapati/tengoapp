@@ -1,0 +1,67 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+            xmlns:g="urn:import:com.google.gwt.user.client.ui">
+  <ui:style>
+    .title {
+        color: red;
+        align: center;
+        font-size: 30px;
+        text-align: center;
+    }
+    .inputField {
+        halign: center;
+        font-size: 30px;
+        text-align: center;
+    }
+    .textBox {
+        color: red;
+        align: center;
+        font-size: 30px;
+        text-align: center;
+    }
+    .clear {
+        clear: both;
+    }
+    .login {
+        padding-top: 20px;
+        halign: center;
+        text-align: center;
+    }
+    .button {
+        text-align: center;
+        font-size: 48px;
+        font-family: san-serif;
+        font-color: #FFFFFF;
+        background-color: #FF9900;
+        border-radius: 6px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .center {
+        background-color: #feffff;
+        valign: center;
+        halign: center;
+    }
+  </ui:style>
+
+  <g:HTMLPanel>
+    <div class="{style.title}">Sign into Tengo Agent Portal</div>
+    <div class="{style.center}">
+      <div class="{style.textBox}">
+        <g:Label ui:field="loginIdLabel">Agent Login</g:Label></div>
+      <div class="{style.inputField}"><g:TextBox ui:field="_loginId"/></div>
+      <div class="{style.clear}"></div>
+      <div class="{style.textBox}">
+        <g:Label ui:field="passwordLabel">Pin #</g:Label></div>
+      <div class="{style.inputField}"> <g:PasswordTextBox 
+            ui:field="_password"/></div>
+      <div class="{style.clear}"></div>
+      <div class="{style.login}">
+        <g:Button ui:field="_loginButton" 
+            text="Login"></g:Button></div>
+      <div class="{style.clear}"></div>
+    </div>
+  </g:HTMLPanel>
+</ui:UiBinder>

@@ -1,0 +1,30 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+            xmlns:g="urn:import:com.google.gwt.user.client.ui">
+  <g:HTMLPanel>
+    <div class="agentMainView">Tengo Agent Portal</div>
+      <ol class="agentTxnList">
+        <li class="agentDepositButtonHolder">
+          <g:HTMLPanel styleName="agentDepositButton">
+            <g:Anchor styleName="DepositButtonText" ui:field="_depositButton"
+              href="javascript:;">Deposit</g:Anchor>
+          </g:HTMLPanel>
+          <div class="clear"></div>
+        </li>
+        <li class="agentWithdrawButtonHolder">
+          <g:HTMLPanel styleName="agentWithdrawButton">
+            <g:Anchor styleName="WithdrawButtonText" ui:field="_withdrawButton"
+              href="javascript:;">Withdraw</g:Anchor>
+          </g:HTMLPanel>
+          <div class="clear"></div>
+        </li>
+        <li class="agentNewAccountButtonHolder">
+          <g:HTMLPanel styleName="agentNewAccountButton">
+            <g:Anchor styleName="NewAccountButtonText" 
+                ui:field="_newAccountButton" href="javascript:;">New Account</g:Anchor>
+          </g:HTMLPanel>
+          <div class="clear"></div>
+        </li>
+      </ol>
+  </g:HTMLPanel>
+</ui:UiBinder>

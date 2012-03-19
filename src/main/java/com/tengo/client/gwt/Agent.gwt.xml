@@ -1,0 +1,15 @@
+<module rename-to='Agent'>
+  <inherits name='com.google.gwt.user.User'/>
+  <inherits name='com.google.gwt.activity.Activity'/>
+  <inherits name='com.google.gwt.inject.Inject'/>
+
+  <inherits name='com.google.gwt.user.theme.standard.Standard'/>
+
+  <inherits name='com.tengo.client.gwt.Util'/>
+  <source path="agent/"/>
+
+  <entry-point class='com.tengo.client.gwt.agent.Main'/>
+
+  <!-- stylesheet src='STYLE.css' -->
+
+</module>
