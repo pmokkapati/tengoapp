@@ -1,12 +1,5 @@
 /*
- * 
- * Copyright 2012 by Tengo, Inc.
- * All rights reserved.
- *
- * This software is the confidential and proprietary information 
- * of Tengo, Inc.
- *
- * @author psm
+ * @author prasadm80@gmail.com
  */
 package com.tengo.server.sms.impl;
 
@@ -41,10 +34,10 @@ public class CalixtaServer extends HttpServlet implements SMS {
     protected Bank _bank;
     protected IVR _ivr;
     protected String _url = "http://www.calixtaondemand.com/Controller.php/__a/sms.send.remote.sa";
-    protected String _cte = "38459";
-    protected String _encpwd = "53081c9519ed5bc34c86ec9a169bb79fa4088e89d52035f3d0019ddaf3ebec08";
+    protected String _cte = "...";
+    protected String _encpwd = "...";
     protected final String _mtipo = "SMS";
-    protected String _email = "pmokkapati@mytengo.com";
+    protected String _email = "...";
         
     @Inject
     protected void init(IVR ivr, Bank b) {
