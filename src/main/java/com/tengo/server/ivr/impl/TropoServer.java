@@ -1,12 +1,5 @@
 /*
- * 
- * Copyright 2011 by Tengo, Inc.
- * All rights reserved.
- *
- * This software is the confidential and proprietary information 
- * of Tengo, Inc.
- *
- * @author psm
+ * @author prasadm80@gmail.com
  */
 package com.tengo.server.ivr.impl;
 
@@ -46,8 +39,8 @@ import com.tengo.businesslogic.Bank;
 import com.tengo.server.ivr.IVR;
 import com.tengo.server.sms.SMS;
 import com.tengo.sqldb.DBException;
-import static com.tengo.beans.Account.*;
-import static com.tengo.beans.Account.Language.*;
+import static com.tengo.beans.AccountInfo.*;
+import static com.tengo.beans.AccountInfo.Language.*;
 
 /**
  * Class to handle (a) Incoming call (b) outbound calls and 
@@ -123,7 +116,7 @@ public class TropoServer extends HttpServlet implements IVR {
     /**
      * Ask user for Pin # for authorization
      */
-    protected void askAuthorizePin(Tropo t, Account.Language l,
+    protected void askAuthorizePin(Tropo t, AccountInfo.Language l,
             HttpServletResponse res) { 
         AskAction ask = t.ask(ATTEMPTS(3), NAME("getpin"),
             BARGEIN(true), TIMEOUT(5f), REQUIRED(true));
@@ -139,7 +132,7 @@ public class TropoServer extends HttpServlet implements IVR {
      * Repeat the pin number typed by the user to confirm. If not correct
      * have them repeat.
      */
-    protected void askVerifyPin(Tropo t, Account.Language l,
+    protected void askVerifyPin(Tropo t, AccountInfo.Language l,
                 HttpServletResponse res, String pin) { 
         int len = pin.length();
         StringBuilder str = new StringBuilder("");
@@ -315,7 +308,7 @@ public class TropoServer extends HttpServlet implements IVR {
             t.hangup();
             t.render(res);
         }
-        Account to=null;
+        AccountInfo to=null;
         double amount = 0;
         for (XLog log: list) {
             if ( log.getTxnType() == XLog.XType.Deposit) {
@@ -412,7 +405,7 @@ public class TropoServer extends HttpServlet implements IVR {
             t.render(res);
         }
         String fromMsg=null, toMsg=null;
-        Account from=null, to=null;
+        AccountInfo from=null, to=null;
         double amount=0;
         for (XLog log: list) {
             switch (authType) {
@@ -602,7 +595,7 @@ public class TropoServer extends HttpServlet implements IVR {
      * @param xid the related transaction id that is logged in XLog.
      * @param from the telephone number (agent ??) that initiated this request
      */
-    public void authorize(AuthType t, Account a, String xid, String from) {
+    public void authorize(AuthType t, AccountInfo a, String xid, String from) {
         final HashMap<String, String> params = new HashMap<String, String>();
         params.put("Reason", "Authorize");
         params.put("AuthType", t.toString());
