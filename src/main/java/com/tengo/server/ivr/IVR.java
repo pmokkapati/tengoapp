@@ -1,23 +1,16 @@
 /*
- * 
- * Copyright 2011 by Tengo, Inc.
- * All rights reserved.
- *
- * This software is the confidential and proprietary information 
- * of Tengo, Inc.
- *
- * @author psm
+ * @author prasadm80@gmail.com
  */
 package com.tengo.server.ivr;
 
 import com.google.inject.ImplementedBy;
 
-import com.tengo.beans.Account;
+import com.tengo.beans.AccountInfo;
 
 @ImplementedBy(com.tengo.server.ivr.impl.TropoServer.class)
 public interface IVR {
     enum AuthType  { Deposit, Withdraw, Transfer, Balance, History };
 
     void newAccount(String callNum, String name, String xid);
-    void authorize(AuthType t, Account a, String xid, String initiatorNum);
+    void authorize(AuthType t, AccountInfo a, String xid, String initiatorNum);
 }

@@ -1,16 +1,9 @@
 /*
- * 
- * Copyright 2012 by Tengo, Inc.
- * All rights reserved.
- *
- * This software is the confidential and proprietary information 
- * of Tengo, Inc.
- *
- * @author psm
+ * @author prasadm80@gmail.com
  */
 package com.tengo.msgs;
 
-import com.tengo.beans.Account;
+import com.tengo.beans.AccountInfo;
 
 public abstract class Message {
 
@@ -18,12 +11,12 @@ public abstract class Message {
             History };
     private MsgType _type;
     private String _xid=null;
-    private Account.Language _language = Account.Language.English;
+    private AccountInfo.Language _language = AccountInfo.Language.English;
 
     protected Message(MsgType t) { 
         _type = t;
     }
-    protected Message(MsgType t, Account.Language l) { 
+    protected Message(MsgType t, AccountInfo.Language l) { 
         _type = t;
         _language = l;
     }
@@ -33,6 +26,6 @@ public abstract class Message {
     public void setXid(String xid) { _xid = xid; }
     public String getXid() { return _xid; }
 
-    public Account.Language getLanguage() { return _language; }
-    public void setLanguage(Account.Language l) { _language = l; }
+    public AccountInfo.Language getLanguage() { return _language; }
+    public void setLanguage(AccountInfo.Language l) { _language = l; }
 }
