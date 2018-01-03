@@ -14,7 +14,7 @@ public class DBModule extends AbstractModule {
         source.setServerName("xchanjerds");
         source.setDatabaseName("xchanjedb");
         source.setUser("prasad");
-        source.setPassword("aka1198");
+        source.setPassword("...");
         _d = source;
     }
 
