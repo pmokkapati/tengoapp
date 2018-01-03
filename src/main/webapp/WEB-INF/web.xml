@@ -176,25 +176,6 @@
     <load-on-startup>0</load-on-startup>
   </servlet>
 
-<!-- Proxy not needed any more
-  <servlet>
-    <servlet-name>GoogleChartProxy</servlet-name>
-    <servlet-class>com.medrium.server.ProxyServlet$Transparent</servlet-class>
-    <load-on-startup>1</load-on-startup>
-    <init-param>
-      <param-name>ProxyTo</param-name><param-value>http://chart.apis.google.com</param-value>
-    </init-param>
-    <init-param>
-      <param-name>Prefix</param-name><param-value>/chartapi</param-value>
-    </init-param>
-  </servlet>
-  
-  <servlet-mapping>
-    <servlet-name>GoogleChartProxy</servlet-name>
-    <url-pattern>/chartapi/*</url-pattern>
-  </servlet-mapping>
-  -->
-
   <servlet-mapping>
     <servlet-name>default</servlet-name>
     <url-pattern>/</url-pattern>
