@@ -15,7 +15,7 @@
       <guice-persist.version>3.0</guice-persist.version>
       <mockito.code.version>1.8.3</mockito.code.version>
       <tropo.version>0.3</tropo.version>
-      <mysql.version>5.1.18</mysql.version>
+      <mysql.version>8.0.28</mysql.version>
       <gwt.version>2.4.0</gwt.version>
       <gin.version>1.5.0</gin.version>
       <sqldb.version>1.0</sqldb.version>
